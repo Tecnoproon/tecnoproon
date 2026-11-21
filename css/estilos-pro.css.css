@@ -1,0 +1,238 @@
+/* Estilos Pro: Contraste, Centrados, Testimonios Flotantes y Slider Intacto */
+body,
+#wrapper {
+    background-color: #0b0d10 !important;
+    color: #f1f5f9 !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: #12151b !important;
+    border-bottom: 1px solid #1e2430;
+}
+
+.navbar .nav>li>a {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    font-weight: 600;
+}
+
+.navbar .nav>li>a:hover,
+.navbar .nav>.active>a {
+    color: #00ffcc !important;
+    background: transparent !important;
+}
+
+#content,
+#works {
+    background-color: #0b0d10 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title strong {
+    color: #ffffff !important;
+}
+
+p,
+li,
+blockquote,
+.text p {
+    color: #e2e8f0 !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.solidline {
+    border-top: 1px solid #1e2430 !important;
+}
+
+/* Sombra de alto contraste para los textos de los sliders */
+.slider-text-shadow h2,
+.slider-text-shadow p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Forzar que el tercer slide (blog) quede perfectamente centrado por CSS sin romper el plugin */
+.camera_caption .span12 {
+    text-align: center !important;
+}
+
+.camera_caption .span12 h2,
+.camera_caption .span12 p {
+    text-align: center !important;
+    float: none !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.camera_caption .span12 img {
+    display: inline-block !important;
+    float: none !important;
+}
+
+/* Alineación centrada para las secciones */
+.section-heading-center {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+.section-heading-center h3,
+.section-heading-center h4 {
+    text-align: center !important;
+    width: 100%;
+}
+
+.section-heading-center p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+/* Tarjetas de servicios */
+.service-card {
+    background: #141820 !important;
+    border: 1px solid #232a38 !important;
+    border-radius: 12px;
+    padding: 28px 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #00ffcc !important;
+    box-shadow: 0 12px 30px rgba(0, 255, 204, 0.18);
+}
+
+/* Cajas de precios */
+.pricing-box-wrap {
+    background: #141820 !important;
+    border: 1px solid #232a38 !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pricing-box-wrap.special {
+    border: 2px solid #00ffcc !important;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.15);
+}
+
+.pricing-heading {
+    background: #1a202c !important;
+    border-bottom: 1px solid #232a38 !important;
+}
+
+.pricing-heading h3 {
+    color: #ffffff !important;
+}
+
+.pricing-terms {
+    background: #101319 !important;
+}
+
+.pricing-terms h6 {
+    color: #00ffcc !important;
+    font-weight: 700;
+}
+
+.pricing-content {
+    background: #141820 !important;
+}
+
+.pricing-content ul li {
+    border-bottom: 1px solid #1e2430 !important;
+    color: #f1f5f9 !important;
+}
+
+.pricing-content ul li i {
+    color: #00ffcc !important;
+}
+
+.pricing-action {
+    background: #101319 !important;
+    border-top: 1px solid #1e2430 !important;
+}
+
+/* Testimonios / Comentarios estilo "Tarjeta Flotante" por encima */
+.bxslider blockquote {
+    background: #141820 !important;
+    border: 1px solid #232a38 !important;
+    border-left: 4px solid #00ffcc !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7) !important;
+    margin-bottom: 25px !important;
+    position: relative;
+}
+
+/* Estadísticas */
+.stats-section {
+    background: #141820;
+    border-top: 1px solid #232a38;
+    border-bottom: 1px solid #232a38;
+    padding: 40px 0;
+    margin: 40px 0;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 38px;
+    font-weight: 800;
+    color: #00ffcc;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+footer {
+    background: #07090b !important;
+    border-top: 2px solid #1a202c;
+}
+
+#sub-footer {
+    background: #040507 !important;
+}

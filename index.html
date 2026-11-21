@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>TECNOPROON - Tecnología Profesional Encendida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Especialistas en soporte técnico, computadoras, laptops, móviles, Smart TV, diseño web, criptomonedas y blog." />
+    <meta name="author" content="TECNOPROON" />
+
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/prettyPhoto.css" rel="stylesheet" />
+    <link href="css/camera.css" rel="stylesheet" />
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Theme skin -->
+    <link href="color/default.css" rel="stylesheet" />
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
+
+    <!-- Estilos Pro: Contraste, Centrados, Testimonios Flotantes y Slider Intacto -->
+    <style>
+        body,
+        #wrapper {
+            background-color: #0b0d10 !important;
+            color: #f1f5f9 !important;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+            background-color: #12151b !important;
+            border-bottom: 1px solid #1e2430;
+        }
+
+        .navbar .nav>li>a {
+            color: #ffffff !important;
+            text-shadow: none !important;
+            font-weight: 600;
+        }
+
+        .navbar .nav>li>a:hover,
+        .navbar .nav>.active>a {
+            color: #00ffcc !important;
+            background: transparent !important;
+        }
+
+        #content,
+        #works {
+            background-color: #0b0d10 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .title strong {
+            color: #ffffff !important;
+        }
+
+        p,
+        li,
+        blockquote,
+        .text p {
+            color: #e2e8f0 !important;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .solidline {
+            border-top: 1px solid #1e2430 !important;
+        }
+
+        /* Sombra de alto contraste para los textos de los sliders */
+        .slider-text-shadow h2,
+        .slider-text-shadow p {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Forzar que el tercer slide (blog) quede perfectamente centrado por CSS sin romper el plugin */
+        .camera_caption .span12 {
+            text-align: center !important;
+        }
+
+        .camera_caption .span12 h2,
+        .camera_caption .span12 p {
+            text-align: center !important;
+            float: none !important;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .camera_caption .span12 img {
+            display: inline-block !important;
+            float: none !important;
+        }
+
+        /* Alineación centrada para las secciones */
+        .section-heading-center {
+            text-align: center !important;
+            margin-bottom: 40px !important;
+        }
+
+        .section-heading-center h3,
+        .section-heading-center h4 {
+            text-align: center !important;
+            width: 100%;
+        }
+
+        .section-heading-center p {
+            text-align: center !important;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 700px;
+        }
+
+        /* Tarjetas de servicios */
+        .service-card {
+            background: #141820 !important;
+            border: 1px solid #232a38 !important;
+            border-radius: 12px;
+            padding: 28px 22px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: #00ffcc !important;
+            box-shadow: 0 12px 30px rgba(0, 255, 204, 0.18);
+        }
+
+        /* Cajas de precios */
+        .pricing-box-wrap {
+            background: #141820 !important;
+            border: 1px solid #232a38 !important;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pricing-box-wrap.special {
+            border: 2px solid #00ffcc !important;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.15);
+        }
+
+        .pricing-heading {
+            background: #1a202c !important;
+            border-bottom: 1px solid #232a38 !important;
+        }
+
+        .pricing-heading h3 {
+            color: #ffffff !important;
+        }
+
+        .pricing-terms {
+            background: #101319 !important;
+        }
+
+        .pricing-terms h6 {
+            color: #00ffcc !important;
+            font-weight: 700;
+        }
+
+        .pricing-content {
+            background: #141820 !important;
+        }
+
+        .pricing-content ul li {
+            border-bottom: 1px solid #1e2430 !important;
+            color: #f1f5f9 !important;
+        }
+
+        .pricing-content ul li i {
+            color: #00ffcc !important;
+        }
+
+        .pricing-action {
+            background: #101319 !important;
+            border-top: 1px solid #1e2430 !important;
+        }
+
+        /* Testimonios / Comentarios estilo "Tarjeta Flotante" por encima */
+        .bxslider blockquote {
+            background: #141820 !important;
+            border: 1px solid #232a38 !important;
+            border-left: 4px solid #00ffcc !important;
+            padding: 30px !important;
+            border-radius: 12px !important;
+            color: #ffffff !important;
+            font-size: 16px !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7) !important;
+            margin-bottom: 25px !important;
+            position: relative;
+        }
+
+        /* Estadísticas */
+        .stats-section {
+            background: #141820;
+            border-top: 1px solid #232a38;
+            border-bottom: 1px solid #232a38;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: #00ffcc;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+            color: #FFF;
+        }
+
+        footer {
+            background: #07090b !important;
+            border-top: 2px solid #1a202c;
+        }
+
+        #sub-footer {
+            background: #040507 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- start header -->
+       <header>
+            <!-- Barra Superior Cyber-Tech con Neón -->
+            <div class="top" style="background: #07090b; border-bottom: 2px solid #00ffcc; padding: 10px 0; box-shadow: 0 2px 15px rgba(0, 255, 204, 0.18);">
+                <div class="container">
+                    <div class="row">
+                        <div class="span6">
+                            <p class="topcontact" style="color: #00ffcc !important; font-weight: 700; margin: 4px 0; font-size: 13px;">
+                                <i class="icon-phone" style="color: #ffffff;"></i> +58 414-417-7132 <span style="color: #cbd5e1; font-size: 11px; margin-left: 10px;">| VALENCIA, VENEZUELA</span>
+                            </p>
+                        </div>
+                        <div class="span6">
+                            <ul class="redes-top" style="list-style: none; margin: 0; padding: 0; float: right; display: flex; gap: 8px; align-items: center;">
+                                <li><a href="https://facebook.com/TU_PAGINA" target="_blank" title="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #1877F2; color: #fff; border-radius: 50%; text-decoration: none; box-shadow: 0 0 8px rgba(24, 119, 242, 0.5);"><i class="icon-facebook"></i></a></li>
+                                <li><a href="https://instagram.com/TU_PAGINA" target="_blank" title="Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #E4405F; color: #fff; border-radius: 50%; text-decoration: none; box-shadow: 0 0 8px rgba(228, 64, 95, 0.5);"><i class="icon-camera"></i></a></li>
+                                <li><a href="https://twitter.com/TU_PAGINA" target="_blank" title="Twitter / X" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #1DA1F2; color: #fff; border-radius: 50%; text-decoration: none; box-shadow: 0 0 8px rgba(29, 161, 242, 0.5);"><i class="icon-twitter"></i></a></li>
+                                <li><a href="https://linkedin.com/TU_PAGINA" target="_blank" title="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #0A66C2; color: #fff; border-radius: 50%; text-decoration: none; box-shadow: 0 0 8px rgba(10, 102, 194, 0.5);"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="https://wa.me/584144177132" target="_blank" title="WhatsApp" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #25D366; color: #fff; border-radius: 50%; text-decoration: none; box-shadow: 0 0 8px rgba(37, 211, 102, 0.5);"><i class="icon-phone"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row nomargin">
+                    <div class="span4">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo.png" alt="TECNOPROON" /></a>
+                        </div>
+                    </div>
+                    <div class="span8">
+                        <div class="navbar navbar-static-top">
+                            <div class="navigation">
+                                <nav>
+                                    <ul class="nav topnav">
+                                        <li class="dropdown active">
+                                            <a href="index.html"><i class="icon-home"></i> Inicio <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="index-alt2.html">Homepage 2</a></li>
+                                                <li><a href="index-alt3.html">Homepage 3</a></li>
+                                                <li><a href="index-alt4.html">Parallax slider</a></li>
+                                                <li><a href="index-landingpage.html">Landing page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Servicios <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="typography.html">Soporte Hardware</a></li>
+                                                <li><a href="components.html">Dise&ntilde;o Web</a></li>
+                                                <li><a href="icons.html">Criptomonedas</a></li>
+                                                <li><a href="icon-variations.html">Blog Tecnol&oacute;gico</a></li>
+                                                <li class="dropdown"><a href="#">M&aacute;s opciones <i class="icon-angle-right"></i></a>
+                                                    <ul class="dropdown-menu sub-menu-level1">
+                                                        <li><a href="index.html">Sub men&uacute;</a></li>
+                                                        <li><a href="index.html">Sub men&uacute;</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">P&aacute;ginas <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="about.html">Nosotros</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
+                                                <li><a href="team.html">Equipo</a></li>
+                                                <li><a href="services.html">Servicios</a></li>
+                                                <li><a href="pricingbox.html">Precios</a></li>
+                                                <li><a href="404.html">404</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Portafolio <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="portfolio-2cols.html">Portafolio 2 columnas</a></li>
+                                                <li><a href="portfolio-3cols.html">Portafolio 3 columnas</a></li>
+                                                <li><a href="portfolio-4cols.html">Portafolio 4 columnas</a></li>
+                                                <li><a href="portfolio-detail.html">Portafolio detalle</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Blog <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="blog-left-sidebar.html">Blog barra izquierda</a></li>
+                                                <li><a href="blog-right-sidebar.html">Blog barra derecha</a></li>
+                                                <li><a href="blog-fullwidth.html">Blog ancho completo</a></li>
+                                                <li><a href="post-left-sidebar.html">Art&iacute;culo barra izquierda</a></li>
+                                                <li><a href="post-right-sidebar.html">Art&iacute;culo barra derecha</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- end navigation -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+
+        <!-- Cintilla de Anuncios de Alto Contraste -->
+     <div style="background: linear-gradient(90deg, #00ffcc, #0ea5e9); color: #0b0d10; font-weight: 800; padding: 9px 15px; font-size: 13px; text-align: center; text-transform: uppercase; letter-spacing: 0.7px;">
+    <a href="https://wa.me/584144177132?text=Hola%20TECNOPROON%2C%20quiero%20informacion%20sobre%20soporte%20tecnico%2C%20creacion%20web%20y%20criptomonedas." target="_blank" rel="noopener noreferrer" style="color: #0b0d10; text-decoration: none; display: inline-block;">
+        &#9889; SERVICIO TECNICO, CREACION WEB Y CRIPTOMONEDAS (AIRDROPS Y HARDWARE/SOFTWARE) ACTIVO EN VALENCIA &nbsp;|&nbsp; &#128172; ESCRIBENOS AL WHATSAPP
+    </a>
+</div>
+        <!-- section featured -->
+       <section id="featured">
+
+            <!-- slideshow start here (Estructura de origen intacta para que rote perfecto) -->
+            <div class="camera_wrap" id="camera-slide">
+
+                <!-- slide 1 here -->
+             <div data-src="img/slides/camera/slide1/img1.jfif">
+    <div class="camera_caption fadeFromLeft slider-text-shadow">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <h2 class="animated fadeInDown" style="color: #ffffff !important; font-weight: 700;">
+                        <strong>TECNOPROON <span style="color: #00ffcc;">Soporte T&eacute;cnico</span></strong>
+                    </h2>
+                    <p class="animated fadeInUp" style="color: #ffffff !important; font-size: 16px;">
+                        Especialistas en diagn&oacute;stico y reparaci&oacute;n de hardware y software en computadoras, laptops, tel&eacute;fonos m&oacute;viles y Smart TVs, con atenci&oacute;n a domicilio en TVs en Valencia, Carabobo.
+                    </p>
+                    <a href="services.html" class="btn btn-success btn-large animated fadeInUp">
+                        <i class="icon-wrench"></i> Ver Servicios
+                    </a>
+                    <a href="https://wa.me/584144177132?text=Hola%20TECNOPROON%2C%20necesito%20soporte%20t%C3%A9cnico." target="_blank" rel="noopener noreferrer" class="btn btn-theme btn-large animated fadeInUp">
+                        <i class="icon-phone"></i> WhatsApp Directo
+                    </a>
+                </div>
+                <div class="span6">
+                    <img src="img/slides/camera/slide1/screen.png" alt="Soporte técnico Tecnoproon a domicilio en Valencia, Carabobo" class="animated bounceInDown delay1" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- slide 2 here -->
+                <div data-src="img/slides/camera/slide2/img1.jfif">
+                    <div class="camera_caption fadeFromLeft slider-text-shadow">
+                        <div class="container">
+                            <div class="row">
+                                <div class="span6">
+                                    <img src="img/slides/camera/slide2/iMac.png" alt="Diseño web y criptomonedas Tecnoproon" />
+                                </div>
+                                <div class="span6">
+                                    <h2 class="animated fadeInDown" style="color: #ffffff !important; font-weight: 700;"><strong>Dise&ntilde;o Web y <span style="color: #38bdf8;">Criptomonedas</span></strong></h2>
+                                    <p class="animated fadeInUp" style="color: #ffffff !important; font-size: 16px;">Impulsamos tu presencia digital con creaci&oacute;n y dise&ntilde;o web profesional, integrando soluciones modernas para el ecosistema cripto, airdrops y soporte t&eacute;cnico.</p>
+                                    <p class="animated fadeInUp">
+                                        <a href="https://wa.me/584144177132?text=Hola%20TECNOPROON%2C%20quiero%20informaci%C3%B3n%20sobre%20dise%C3%B1o%20web%20y%20criptomonedas." target="_blank" rel="noopener noreferrer" class="btn btn-theme btn-large">
+                                            <i class="icon-info-sign"></i> Solicitar Informaci&oacute;n por WhatsApp
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide 3 here (Estructura limpia original, centrada automáticamente por CSS) -->
+                <div data-src="img/slides/camera/slide2/img1.jfif">
+                    <div class="camera_caption fadeFromLeft slider-text-shadow">
+                        <div class="container">
+                            <div class="row">
+                                <div class="span12 aligncenter">
+                                    <h2 class="animated fadeInDown" style="color: #ffffff !important; font-weight: 700;"><strong><span style="color: #00ffcc;">Blog Tecnol&oacute;gico</span> y <span style="color: #38bdf8;">Creaci&oacute;n de Contenido</span></strong></h2>
+                                    <p class="animated fadeInUp" style="color: #ffffff !important; font-size: 16px;">Mantente actualizado con art&iacute;culos, gu&iacute;as y contenidos especializados creados para potenciar el conocimiento tecnol&oacute;gico de nuestra comunidad.</p>
+                                    <p class="animated fadeInUp">
+                                        <a href="blog-fullwidth.html" class="btn btn-theme btn-large">
+                                            <i class="icon-book"></i> Ir al Blog
+                                        </a>
+                                    </p>
+                                    <img src="img/slides/camera/slide3/browsers.png" alt="Blog tecnológico Tecnoproon" class="animated bounceInDown delay1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- slideshow end here -->
+        </section>
+     
+
+      <!-- CONVERSOR MULTI-DIVISA -->
+<!-- CONVERSOR MULTI-DIVISA TECNOPROON -->
+<div id="tp-multidivisa-box" style="background:#141820;border:2px solid #00ffcc;border-radius:12px;padding:25px;text-align:center;box-shadow:0 10px 30px rgba(0,255,204,0.15);margin:0;transition:box-shadow 0.3s ease;">
+    <h4 style="color:#ffffff;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">
+        <i class="icon-bitcoin" style="color:#f7931a;"></i> Conversor <span style="color:#00ffcc;">Multi-Divisa</span>
+    </h4>
+    <p style="color:#94a3b8;font-size:13px;margin-bottom:5px;">Precios en tiempo real (Binance y BCV)</p>
+    <div id="btc-live-price" style="font-size:38px;font-weight:800;color:#00ffcc;margin:10px 0 2px 0;text-shadow:0 0 15px rgba(0,255,204,0.3);">Cargando...</div>
+    <p id="tp-rates-status" style="color:#cbd5e1;font-size:12px;margin-top:2px;margin-bottom:18px;">
+        Par: <strong>BTC / USDT</strong> &bull; Consultando tasa BCV...
+    </p>
+    <div style="border-top:1px solid #232a38;padding-top:18px;max-width:480px;margin:0 auto;">
+        <div style="display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;">
+            <input id="conv-amount" type="number" step="any" min="0" value="1" oninput="if(typeof runMultiConv==='function')runMultiConv()" placeholder="Monto" style="width:100px;height:38px;padding:0 10px;border-radius:6px;border:1px solid #00ffcc;background:#0b0d10;color:#ffffff;font-weight:700;text-align:center;margin:0;box-sizing:border-box;">
+            <select id="conv-type" onchange="if(typeof runMultiConv==='function')runMultiConv()" style="width:165px;height:38px;padding:0 8px;border-radius:6px;border:1px solid #232a38;background:#1a202c;color:#00ffcc;font-weight:700;margin:0;box-sizing:border-box;">
+                <option value="ves_to_usd">Bol&iacute;vares a USD</option>
+                <option value="usd_to_btc">USD a BTC</option>
+                <option value="btc_to_usd">BTC a USD</option>
+                <option value="usd_to_ves">USD a Bol&iacute;vares</option>
+            </select>
+            <div id="conv-result" style="min-width:135px;min-height:38px;padding:0 12px;border-radius:6px;background:#0b0d10;border:1px solid #232a38;color:#00ffcc;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">0.00</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentBtcPrice = 0;
+    let tasaBCV = 914.02;
+    let bcvEnVivo = false;
+
+    function actualizarEstadoTasas() {
+        const statusEl = document.getElementById('tp-rates-status');
+        if (!statusEl) return;
+        const bcvTexto = tasaBCV.toLocaleString('es-VE', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+        const origenBcv = bcvEnVivo ? 'BCV en l&iacute;nea' : 'BCV referencia';
+        statusEl.innerHTML = 'Par: <strong>BTC / USDT</strong> &bull; ' + origenBcv + ': <strong>Bs. ' + bcvTexto + '</strong>';
+    }
+
+    async function fetchBinancePrice() {
+        try {
+            const resBtc = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
+            if (!resBtc.ok) throw new Error('Error Binance HTTP');
+            const dataBtc = await resBtc.json();
+            if (dataBtc && dataBtc.price) {
+                currentBtcPrice = parseFloat(dataBtc.price);
+                const p = currentBtcPrice.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+                document.getElementById('btc-live-price').innerText = '$' + p + ' USDT';
+            }
+        } catch (err) {
+            console.warn('No se pudo actualizar BTC desde Binance:', err);
+            if (currentBtcPrice <= 0) {
+                document.getElementById('btc-live-price').innerText = 'Sin conexi\u00f3n BTC';
+            }
+        }
+    }
+
+    async function fetchBcvRate() {
+        try {
+            const resBcv = await fetch('https://pydolarvenezuela-api.vercel.app/api/v1/dollar?page=bcv');
+            if (!resBcv.ok) throw new Error('Error BCV HTTP');
+            const dataBcv = await resBcv.json();
+            const precioBcv = dataBcv && dataBcv.monitors && dataBcv.monitors.usd
+                ? parseFloat(dataBcv.monitors.usd.price)
+                : NaN;
+
+            if (!isNaN(precioBcv) && precioBcv > 0) {
+                tasaBCV = precioBcv;
+                bcvEnVivo = true;
+            }
+        } catch (err) {
+            console.warn('No se pudo actualizar tasa BCV en vivo, se usa referencia:', err);
+            bcvEnVivo = false;
+        } finally {
+            actualizarEstadoTasas();
+        }
+    }
+
+    async function fetchLiveData() {
+        await Promise.all([fetchBinancePrice(), fetchBcvRate()]);
+        runMultiConv();
+    }
+
+    function runMultiConv() {
+        const amt = parseFloat(document.getElementById('conv-amount').value) || 0;
+        const type = document.getElementById('conv-type').value;
+        const resDiv = document.getElementById('conv-result');
+
+        if (type === 'usd_to_btc') {
+            if (currentBtcPrice <= 0) {
+                resDiv.innerText = 'Esperando BTC...';
+                return;
+            }
+            const res = amt / currentBtcPrice;
+            resDiv.innerText = res < 1 ? res.toFixed(8) + ' BTC' : res.toFixed(4) + ' BTC';
+        } else if (type === 'btc_to_usd') {
+            if (currentBtcPrice <= 0) {
+                resDiv.innerText = 'Esperando BTC...';
+                return;
+            }
+            const res = amt * currentBtcPrice;
+            resDiv.innerText = '$' + res.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }) + ' USD';
+        } else if (type === 'usd_to_ves') {
+            const res = amt * tasaBCV;
+            resDiv.innerText = res.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }) + ' VES';
+        } else if (type === 'ves_to_usd') {
+            const res = tasaBCV > 0 ? amt / tasaBCV : 0;
+            resDiv.innerText = '$' + res.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }) + ' USD';
+        }
+    }
+
+    actualizarEstadoTasas();
+    fetchLiveData();
+    setInterval(fetchLiveData, 30000);
+</script>
+        <script>
+            let currentBtcPrice = 0,
+                tasaBCV = 914.02;
+            async function fetchLiveData() {
+                try {
+                    let resBtc = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
+                    let dataBtc = await resBtc.json();
+                    if (dataBtc && dataBtc.price) {
+                        currentBtcPrice = parseFloat(dataBtc.price);
+                        let p = currentBtcPrice.toLocaleString('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+                        document.getElementById('btc-live-price').innerText = '$' + p + ' USDT';
+                    }
+                    let resBcv = await fetch('https://pydolarvenezuela-api.vercel.app/api/v1/dollar?page=bcv');
+                    let dataBcv = await resBcv.json();
+                    if (dataBcv && dataBcv.monitors && dataBcv.monitors.usd) {
+                        tasaBCV = parseFloat(dataBcv.monitors.usd.price);
+                    }
+                    runMultiConv();
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+
+            function runMultiConv() {
+                let amt = parseFloat(document.getElementById('conv-amount').value) || 0,
+                    type = document.getElementById('conv-type').value,
+                    resDiv = document.getElementById('conv-result');
+                if (type === 'usd_to_btc') {
+                    if (currentBtcPrice <= 0) return;
+                    let res = amt / currentBtcPrice;
+                    resDiv.innerText = res < 1 ? res.toFixed(8) + ' BTC' : res.toFixed(4) + ' BTC';
+                } else if (type === 'btc_to_usd') {
+                    if (currentBtcPrice <= 0) return;
+                    let res = amt * currentBtcPrice;
+                    resDiv.innerText = '$' + res.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    }) + ' USD';
+                } else if (type === 'usd_to_ves') {
+                    let res = amt * tasaBCV;
+                    resDiv.innerText = res.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    }) + ' VES';
+                } else if (type === 'ves_to_usd') {
+                    let res = amt / tasaBCV;
+                    resDiv.innerText = '$' + res.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    }) + ' USD';
+                }
+            }
+            fetchLiveData();
+            setInterval(fetchLiveData, 30000);
+        </script>
+
+
+
+        <!-- /section featured -->
+
+        <section id="content">
+            <div class="container">
+
+                <div class="row">
+                    <div class="span12">
+                        <div class="row">
+<!-- Tarjeta 1 -->
+   <!-- Fila 1 -->
+                        <div class="span4">
+                            <div class="box flyLeft service-card" style="min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="ico icon-circled icon-laptop active icon-3x" style="background: #00ffcc; color: #0b0d10;"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4>Soporte <strong style="color: #00ffcc;">T&eacute;cnico</strong></h4>
+                                        <p style="color: #f1f5f9 !important; margin-bottom: 10px;">
+                                            Reparaci&oacute;n avanzada y mantenimiento experto de computadoras, laptops, tel&eacute;fonos m&oacute;viles y Smart TVs: hardware y software.
+                                        </p>
+                                        <span style="display: inline-block; background: rgba(0, 255, 204, 0.12); border: 1px solid rgba(0, 255, 204, 0.35); color: #00ffcc; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px;">
+                                            &#127968; Atenci&oacute;n a domicilio en TVs
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 6px;">
+                                    <a href="soporte-tecnicolandingpage.html" style="color: #00ffcc; font-weight: 700; text-decoration: none;">Saber M&aacute;s &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 2 -->
+                        <div class="span4">
+                            <div class="box flyIn service-card" style="min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="ico icon-circled icon-globe active icon-3x" style="background: #1877F2; color: #ffffff;"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4>Dise&ntilde;o <strong style="color: #38bdf8;">Web</strong></h4>
+                                        <p style="color: #f1f5f9 !important;">
+                                            Creaci&oacute;n de p&aacute;ginas web modernas, adaptables y profesionales enfocadas en mostrar tus servicios y atraer clientes.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 12px;">
+                                    <a href="weblandingpage.html" style="color: #38bdf8; font-weight: 700; text-decoration: none;">Saber M&aacute;s &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 3 -->
+                        <div class="span4">
+                            <div class="box flyRight service-card" style="min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="ico icon-circled icon-bitcoin active icon-3x" style="background: #f7931a; color: #ffffff;"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4>Bitcoin &amp; <strong style="color: #fbbf24;">Exchange</strong></h4>
+                                        <p style="color: #f1f5f9 !important;">
+                                            Estrategia sobre m&eacute;todos de pago modernos, uso de exchanges y c&oacute;mo ganar dinero digital de forma segura.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 12px;">
+                                    <a href="binancelandingpage.html" style="color: #fbbf24; font-weight: 700; text-decoration: none;">Saber M&aacute;s &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 30px;">
+                        <!-- Tarjeta 4: RuneScape -->
+                        <div class="span4">
+                            <div class="box flyLeft service-card" style="min-height: 230px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="ico icon-circled icon-gamepad active icon-3x" style="background: #2563eb; color: #ffffff;"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4>Juega <strong style="color: #60a5fa;">RuneScape</strong></h4>
+                                        <p style="color: #f1f5f9 !important;">
+                                            Sum&eacute;rgete en el mundo de Old School RuneScape y RuneScape con gu&iacute;as, estrategias y m&eacute;todos de progresi&oacute;n.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 12px;">
+                                    <a href="runescapeoldlandingpage.html" style="color: #60a5fa; font-weight: 700; text-decoration: none;">Comenzar a Jugar &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 5: Airdrops -->
+                        <div class="span4">
+                            <div class="box flyIn service-card" style="min-height: 230px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="ico icon-circled icon-gift active icon-3x" style="background: #9333ea; color: #ffffff;"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4>Participa en <strong style="color: #c084fc;">Airdrops</strong></h4>
+                                        <p style="color: #f1f5f9 !important;">
+                                            Descubre oportunidades exclusivas y gu&iacute;as paso a paso para participar en nuestros airdrops y maximizar tus recompensas.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 12px;">
+                                    <a href="airdroplandingpage.html" style="color: #c084fc; font-weight: 700; text-decoration: none;">Participar Ahora &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 6: Cursos y Capacitación -->
+                        <div class="span4">
+                            <div class="box flyRight service-card" style="min-height: 230px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="ico icon-circled icon-book active icon-3x" style="background: #10b981; color: #ffffff;"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4>Cursos y <strong style="color: #34d399;">Capacitaci&oacute;n</strong></h4>
+                                        <p style="color: #f1f5f9 !important;">
+                                            Acorta tu curva de aprendizaje y domina las herramientas tecnol&oacute;gicas del futuro con nuestros programas especializados en formato f&iacute;sico y online.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 12px;">
+                                    <a href="cursosplandingpage.html" style="color: #34d399; font-weight: 700; text-decoration: none;">Ver Cursos &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SECCION DE ESTADISTICAS PROFESIONALES -->
+                <div class="row">
+                    <div class="span12">
+                        <div class="stats-section">
+                            <div class="row">
+                                <div class="span3 stat-box">
+                                    <div class="stat-number">+500</div>
+                                    <div class="stat-label">Dispositivos Reparados</div>
+                                </div>
+                                <div class="span3 stat-box">
+                                    <div class="stat-number">+100</div>
+                                    <div class="stat-label">P&aacute;ginas Web Creadas</div>
+                                </div>
+                                <div class="span3 stat-box">
+                                    <div class="stat-number">+5</div>
+                                    <div class="stat-label">A&ntilde;os de Experiencia</div>
+                                </div>
+                                <div class="span3 stat-box">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Garant&iacute;a Asegurada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span12">
+                        <div class="solidline"></div>
+                    </div>
+                </div>
+
+ <!-- SECCION PLANES Y SERVICIOS DIGITALES -->
+   <!-- SECCION PLANES Y SERVICIOS DIGITALES (ANIMADA Y REVISADA) -->
+<style>
+    #planes-tecnoproon-box .plan-promo-badge {
+        background-color: rgba(0, 255, 204, 0.15);
+        border: 1px dashed #00ffcc;
+        color: #00ffcc;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        animation: pulsoPromo 2.4s ease-in-out infinite;
+    }
+
+    #planes-tecnoproon-box .plan-blog-link {
+        color: #00ffcc !important;
+        font-size: 14px;
+        text-decoration: none !important;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 255, 204, 0.35);
+        transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    #planes-tecnoproon-box .plan-blog-link:hover {
+        transform: translateY(-2px);
+        background: rgba(0, 255, 204, 0.12);
+        box-shadow: 0 4px 14px rgba(0, 255, 204, 0.25);
+    }
+
+    #planes-tecnoproon-box .plan-banner-wrap {
+        width: 100%;
+        max-height: 150px;
+        overflow: hidden;
+        border: 1px solid #00ffcc;
+        border-radius: 8px;
+        box-shadow: 0 4px 18px rgba(0, 255, 204, 0.16);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    #planes-tecnoproon-box .plan-banner-wrap:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 255, 204, 0.3);
+    }
+
+    #planes-tecnoproon-box .pricing-box-wrap {
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    #planes-tecnoproon-box .pricing-box-wrap:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 26px rgba(0, 255, 204, 0.22);
+    }
+
+    #planes-tecnoproon-box .pricing-box-wrap.special {
+        border: 1px solid rgba(0, 255, 204, 0.65);
+        box-shadow: 0 8px 24px rgba(0, 255, 204, 0.18);
+    }
+
+    #planes-tecnoproon-box .plan-cta-outline {
+        display: inline-block;
+        background: transparent;
+        border: 2px solid #00ffcc;
+        color: #00ffcc !important;
+        padding: 9px 18px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    #planes-tecnoproon-box .plan-cta-outline:hover {
+        transform: translateY(-2px);
+        background: #00ffcc;
+        color: #0b0d10 !important;
+        box-shadow: 0 6px 18px rgba(0, 255, 204, 0.35);
+    }
+
+    @keyframes pulsoPromo {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(0, 255, 204, 0);
+        }
+        50% {
+            transform: scale(1.02);
+            box-shadow: 0 0 14px rgba(0, 255, 204, 0.28);
+        }
+    }
+</style>
+
+<div class="row" id="planes-tecnoproon-box">
+    <div class="span12">
+
+        <!-- Cabecera con Abrebocas, Descuento y Primer Llamado a la Acción (Arriba) -->
+        <div class="row">
+            <div class="span12 section-heading-center">
+                <h3>&#9889; Potencia tu Negocio con Tecnolog&iacute;a &amp; <strong style="color: #00ffcc;">Publicidad Real</strong></h3>
+                <p style="color: #e2e8f0 !important; font-size: 16px;">&iquest;Quieres destacar en internet? No vendemos simples plantillas; construimos marcas memorables y ecosistemas web (Frontend y Backend) listos para facturar y conectar con tus clientes desde el d&iacute;a uno.</p>
+
+                <!-- Descuento y Botón/Enlace al Blog (Arriba) -->
+                <div style="margin: 15px 0 25px 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px;">
+                    <span class="plan-promo-badge">
+                        &iexcl;Promoci&oacute;n por tiempo limitado! Contrata hoy y obt&eacute;n un <strong>10% de descuento</strong>.
+                    </span>
+                    <a href="blog-educativo.html" class="plan-blog-link">
+                        <i class="icon-book"></i> &iquest;Tienes dudas? Lee nuestro Blog &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Superior Adaptado (Ruta exacta con mayúsculas) -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="span12" style="text-align: center;">
+                <div class="plan-banner-wrap">
+                    <img src="img/Emprende-Total.JFIF" alt="Kit Emprende Total Tecnoproon" style="width: 100%; height: 150px; object-fit: cover; display: block;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Los 4 Planes (Ordenados de menor a mayor precio) -->
+        <div class="row">
+
+            <!-- Plan 1: Identidad & Logo ($30) -->
+            <div class="span3">
+                <div class="pricing-box-wrap animated-fast flyIn">
+                    <div class="pricing-heading">
+                        <h3>Identidad &amp; <strong>Logo</strong></h3>
+                    </div>
+                    <div class="pricing-terms">
+                        <h6>Creaci&oacute;n de Marca</h6>
+                        <div class="pricing-price" style="margin: 8px 0;">
+                            <span style="font-size: 22px; font-weight: bold; color: #00ffcc;">$30</span>
+                        </div>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                            <li><i class="icon-ok"></i> Dise&ntilde;o de logotipo profesional</li>
+                            <li><i class="icon-ok"></i> Paleta de colores corporativa</li>
+                            <li><i class="icon-ok"></i> Tipograf&iacute;as de marca</li>
+                            <li><i class="icon-ok"></i> Kit b&aacute;sico para redes</li>
+                            <li><i class="icon-ok"></i> Archivos en alta resoluci&oacute;n</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="contact.html" class="btn btn-medium btn-theme"><i class="icon-chevron-down"></i> Consultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 2: Redes & Contenido ($50) -->
+            <div class="span3">
+                <div class="pricing-box-wrap animated flyIn">
+                    <div class="pricing-heading">
+                        <h3>Redes &amp; <strong>Contenido</strong></h3>
+                    </div>
+                    <div class="pricing-terms">
+                        <h6>Publicidad Audiovisual</h6>
+                        <div class="pricing-price" style="margin: 8px 0;">
+                            <span style="font-size: 22px; font-weight: bold; color: #00ffcc;">$50</span>
+                        </div>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                            <li><i class="icon-ok"></i> Creaci&oacute;n de contenido en video</li>
+                            <li><i class="icon-ok"></i> Dise&ntilde;o de publicaciones</li>
+                            <li><i class="icon-ok"></i> Estrategia de alcance</li>
+                            <li><i class="icon-ok"></i> Plantillas editables</li>
+                            <li><i class="icon-ok"></i> Enfoque comercial y ventas</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="contact.html" class="btn btn-medium btn-theme"><i class="icon-chevron-down"></i> Consultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 3: Emprende Total ($110 - Destacado) -->
+            <div class="span3">
+                <div class="pricing-box-wrap special animated-fast flyIn">
+                    <div class="pricing-heading">
+                        <h3>Emprende <strong>Total</strong></h3>
+                    </div>
+                    <div class="pricing-terms">
+                        <h6>Kit Marca &amp; Web</h6>
+                        <div class="pricing-price" style="margin: 8px 0;">
+                            <span style="font-size: 22px; font-weight: bold; color: #00ffcc;">$110</span>
+                        </div>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                            <li><i class="icon-ok"></i> P&aacute;gina Web Profesional</li>
+                            <li><i class="icon-ok"></i> Art&iacute;culos y blog inicial</li>
+                            <li><i class="icon-ok"></i> Video y contenido digital</li>
+                            <li><i class="icon-ok"></i> Bot&oacute;n WhatsApp y redes</li>
+                            <li><i class="icon-ok"></i> Asesor&iacute;a de marca</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="contact.html" class="btn btn-medium btn-theme"><i class="icon-chevron-down"></i> &iexcl;Lo Quiero!</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 4: Desarrollo Web Pro ($180) -->
+            <div class="span3">
+                <div class="pricing-box-wrap animated flyIn">
+                    <div class="pricing-heading">
+                        <h3>Desarrollo <strong>Web Pro</strong></h3>
+                    </div>
+                    <div class="pricing-terms">
+                        <h6>Frontend &amp; Backend</h6>
+                        <div class="pricing-price" style="margin: 8px 0;">
+                            <span style="font-size: 22px; font-weight: bold; color: #00ffcc;">$180</span>
+                        </div>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                            <li><i class="icon-ok"></i> Dise&ntilde;o Frontend avanzado</li>
+                            <li><i class="icon-ok"></i> Desarrollo Backend a medida</li>
+                            <li><i class="icon-ok"></i> Bases de datos y seguridad</li>
+                            <li><i class="icon-ok"></i> Formularios interactivos</li>
+                            <li><i class="icon-ok"></i> Optimizaci&oacute;n y SEO t&eacute;cnico</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="contact.html" class="btn btn-medium btn-theme"><i class="icon-chevron-down"></i> Consultar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- LLAMADO A LA ACCIÓN 2: Bloque con Botón sincronizado al final de los planes -->
+        <div class="row" style="margin-top: 40px;">
+            <div class="span12" style="text-align: center; background: rgba(0, 255, 204, 0.05); border: 1px dashed #00ffcc; padding: 25px; border-radius: 8px;">
+                <h4 style="color: #fff; margin-bottom: 10px;">&iquest;No sabes por d&oacute;nde empezar o tienes dudas sobre qu&eacute; necesita tu marca?</h4>
+                <p style="color: #e2e8f0; font-size: 14px; margin-bottom: 16px;">Visita nuestro espacio de lectura y descubre consejos sencillos para llevar tu negocio al mundo digital paso a paso.</p>
+                <a href="blog-educativo.html" class="plan-cta-outline">
+                    <i class="icon-book"></i> &iquest;Tienes dudas? Lee nuestro Blog &rarr;
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+                <!-- SECCION TRABAJOS RECIENTES (Centrado) -->
+              <!-- SECCION PLANES Y SERVICIOS (Centrado) -->
+   <!-- SECCION TRABAJOS RECIENTES (4 EN FILA EN ESCRITORIO Y CENTRADA) -->
+<style>
+    #trabajos-recientes-box {
+        margin-top: 40px;
+    }
+
+    #trabajos-recientes-box .trabajos-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    #trabajos-recientes-box .trabajos-header p {
+        color: #cbd5e1 !important;
+        font-size: 14px;
+        max-width: 680px;
+        margin: 8px auto 0 auto;
+        text-align: center;
+    }
+
+    #trabajos-recientes-box .trabajos-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    #trabajos-recientes-box .work-card-item {
+        border: 1px solid #232a38;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #141820;
+        height: 100%;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #trabajos-recientes-box .work-card-item:hover {
+        transform: translateY(-6px);
+        border-color: #00ffcc;
+        box-shadow: 0 10px 24px rgba(0, 255, 204, 0.22);
+    }
+
+    #trabajos-recientes-box .work-card-item figure,
+    #trabajos-recientes-box .work-card-item figure > div,
+    #trabajos-recientes-box .work-card-item figure img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    #trabajos-recientes-box .trabajos-cta-wrap {
+        margin-top: 22px;
+        text-align: center;
+    }
+
+    #trabajos-recientes-box .trabajos-cta-link {
+        color: #00ffcc !important;
+        font-weight: 700;
+        text-decoration: none !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        font-size: 14px;
+        display: inline-block;
+        transition: transform 0.25s ease, text-shadow 0.25s ease;
+    }
+
+    #trabajos-recientes-box .trabajos-cta-link:hover {
+        transform: translateY(-2px);
+        text-shadow: 0 0 12px rgba(0, 255, 204, 0.45);
+    }
+
+    @media (max-width: 991px) {
+        #trabajos-recientes-box .trabajos-grid-4 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 575px) {
+        #trabajos-recientes-box .trabajos-grid-4 {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="row" id="trabajos-recientes-box">
+    <div class="span12">
+        <div class="trabajos-header">
+            <h4 class="title" style="text-align: center; display: block; width: 100%; margin: 0;">
+                &#9889; Trabajos <strong style="color: #00ffcc;">Recientes</strong> &#9889;
+            </h4>
+            <p>
+                Resultados reales en soporte t&eacute;cnico, creaci&oacute;n web y soluciones digitales. &iexcl;Tu proyecto puede ser el pr&oacute;ximo!
+            </p>
+        </div>
+
+        <div class="grid cs-style-4 trabajos-grid-4">
+            <!-- Trabajo 1 -->
+            <div class="item work-card-item">
+                <figure>
+                    <div><img src="img/dummies/works/1.jpg" alt="Reparaci&oacute;n de Hardware y Laptops Tecnoproon" /></div>
+                    <figcaption>
+                        <div>
+                            <span>
+                                <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Reparaci&oacute;n de Hardware y Laptops"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                            <span>
+                                <a href="soporte-tecnicolandingpage.html" title="Ver servicio de Soporte T&eacute;cnico"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Trabajo 2 -->
+            <div class="item work-card-item">
+                <figure>
+                    <div><img src="img/dummies/works/2.jpg" alt="Servicio para Smart TV y M&oacute;viles Tecnoproon" /></div>
+                    <figcaption>
+                        <div>
+                            <span>
+                                <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Servicio para Smart TV y M&oacute;viles"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                            <span>
+                                <a href="soporte-tecnicolandingpage.html" title="Ver servicio a domicilio en TV y M&oacute;viles"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Trabajo 3 -->
+            <div class="item work-card-item">
+                <figure>
+                    <div><img src="img/dummies/works/3.jpg" alt="Dise&ntilde;o Web Profesional Tecnoproon" /></div>
+                    <figcaption>
+                        <div>
+                            <span>
+                                <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Dise&ntilde;o Web Profesional"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                            <span>
+                                <a href="weblandingpage.html" title="Ver servicio de Dise&ntilde;o Web"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Trabajo 4 -->
+            <div class="item work-card-item">
+                <figure>
+                    <div><img src="img/dummies/works/4.jpg" alt="Blog y Criptomonedas Tecnoproon" /></div>
+                    <figcaption>
+                        <div>
+                            <span>
+                                <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Blog y Criptomonedas"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                            <span>
+                                <a href="binancelandingpage.html" title="Ver gu&iacute;as de Criptomonedas y Exchange"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
+                            </span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="trabajos-cta-wrap">
+            <a href="https://wa.me/584144177132?text=Hola%20TECNOPROON%2C%20vi%20sus%20trabajos%20recientes%20y%20quiero%20cotizar." target="_blank" rel="noopener noreferrer" class="trabajos-cta-link">
+                &iquest;Quieres un resultado as&iacute;? Cotiza por WhatsApp &rarr;
+            </a>
+        </div>
+    </div>
+</div>
+                    </div>
+                </section>
+
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="span4">
+                                <div class="widget">
+                                    <h5 class="widgetheading" style="color: #00ffcc !important;">Navegaci&oacute;n</h5>
+                                    <ul class="link-list">
+                                        <li><a href="about.html">Nuestra empresa</a></li>
+                                        <li><a href="#">T&eacute;rminos y condiciones</a></li>
+                                        <li><a href="#">Pol&iacute;tica de privacidad</a></li>
+                                        <li><a href="services.html">Servicios t&eacute;cnicos</a></li>
+                                        <li><a href="portfolio-3cols.html">Proyectos realizados</a></li>
+                                        <li><a href="contact.html">Soporte y contacto</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="widget">
+                                    <h5 class="widgetheading" style="color: #00ffcc !important;">Contacto y Horarios</h5>
+                                    <address style="color: #e2e8f0;">
+                                        <strong style="color: #fff;">TECNOPROON C.A.</strong><br>
+                                        Tecnolog&iacute;a Profesional Encendida<br>
+                                        Valencia, Venezuela
+                                    </address>
+                                    <p>
+                                        <i class="icon-phone" style="color: #00ffcc;"></i> +58 414-177132<br>
+                                        <i class="icon-envelope-alt" style="color: #00ffcc;"></i> contacto@tecnoproon.com<br>
+                                        <i class="icon-time" style="color: #00ffcc;"></i> Lun - S&aacute;b: 8:00 AM - 6:00 PM
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="widget">
+                                    <h5 class="widgetheading" style="color: #00ffcc !important;">Suscr&iacute;bete al Blog</h5>
+                                    <p>
+                                        Mantente actualizado con nuestras publicaciones de hardware, cripto y dise&ntilde;o web. Ingresa tu correo.
+                                    </p>
+                                    <form class="subscribe">
+                                        <div class="input-append">
+                                            <input class="span2" id="appendedInputButton" type="text" placeholder="Tu correo..." style="background: #fff; color: #111;">
+                                            <button class="btn btn-theme" type="submit">Unirme</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sub-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="span6">
+                                    <div class="copyright">
+                                        <p><span>&copy; TECNOPROON C.A. Todos los derechos reservados.</span></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="span6">
+                                    <div class="credits">
+                                        Adaptado para <strong style="color: #00ffcc;">TECNOPROON</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <!-- BOTON FLOTANTE DE WHATSAPP -->
+            <a href="https://wa.me/58414177132" class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+                <i class="icon-phone"></i>
+            </a>
+
+            <a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bglight icon-2x active"></i></a>
+
+            <!-- javascript
+     ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="js/jquery.js"></script>
+            <script src="js/jquery.easing.1.3.js"></script>
+            <script src="js/bootstrap.js"></script>
+
+            <script src="js/modernizr.custom.js"></script>
+            <script src="js/toucheffects.js"></script>
+            <script src="js/google-code-prettify/prettify.js"></script>
+            <script src="js/jquery.bxslider.min.js"></script>
+            <script src="js/camera/camera.js"></script>
+            <script src="js/camera/setting.js"></script>
+
+            <script src="js/jquery.prettyPhoto.js"></script>
+            <script src="js/portfolio/jquery.quicksand.js"></script>
+            <script src="js/portfolio/setting.js"></script>
+
+            <script src="js/jquery.flexslider.js"></script>
+            <script src="js/animate.js"></script>
+            <script src="js/inview.js"></script>
+
+            <!-- Template Custom JavaScript File -->
+            <script src="js/custom.js"></script>
+
+</body>
+</html>
